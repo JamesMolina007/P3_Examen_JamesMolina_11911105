@@ -1,7 +1,10 @@
 #include <string>
 #include <array>
+#include <iostream>
 #include "pequenafamilia.hpp"
 #pragma once
+
+using namespace std;
 
 class starks{
 	private:
@@ -9,11 +12,11 @@ class starks{
 		int lobos;
 		string animal;
 		string lema;
-		array < pequenafamilia, 10 > soldados;
+		pequenafamilia soldados[10];
 	       	int integrantes;
 	public:
-		starks():
+		starks();
 		starks( string jefe, int lobos, string animal, string lema, int integrantes );
-		void setSoldado( pequenafamilia noble );
-
+		void setSoldado( pequenafamilia noble, int numero );
+		pequenafamilia* getSoldados() { return soldados; };
 };

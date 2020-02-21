@@ -1,5 +1,7 @@
 #include <string>
 #include <array>
+#include <iostream>
+#include "dragones.hpp"
 #pragma once
 
 class targaryen {
@@ -7,10 +9,11 @@ class targaryen {
 		string reina;
 		string animal;
 		string lema;
-		array< dragones, 10 > soldados;
+		dragones soldados[10];
 		int barcos;
 	public:
 		targaryen();
 		targaryen( string reina, string animal, string lema, int barcos );
-		void setSoldado( dragones dragon);
+		void setSoldado( dragones dragon, int numero);
+		dragones* getDragones() { return soldados; };
 };
