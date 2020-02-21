@@ -22,7 +22,7 @@ void agregarStarks(){
 	string lema;
 	int ataque;
 	int defensa;
-	if( contS < 10 ){
+	if( contS < 10  && screado == false){
 		cout << "Ingrese nombre: ";
 		cin >> nombre;
 		cout << "Ingrese simbolo: ";
@@ -37,13 +37,13 @@ void agregarStarks(){
 		s.setSoldado( pf, contS );
 		contS++;
 	}else
-		cout << "El ejercito ya esta lleno" << endl;
+		cout << "El ejercito ya esta lleno o No se ha creado la familia" << endl;
 }
 
 void agregarLannister(){
 	string nombre;
 	int tipo, edad, ataque, defensa;
-	if( contL < 10 ){
+	if( contL < 10  && lcreado == false){
 		cout << "Ingrese Nombre: ";
 		cin >> nombre;
 		do{
@@ -72,11 +72,11 @@ void agregarLannister(){
 		l.setSoldado( g, contL );
 		contL++;
 	}else
-		cout << "El ejercito ya esta lleno! " << endl;
+		cout << "El ejercito ya esta lleno o no se ha creado la familia " << endl;
 }
 
 void agregarTargaryen(){
-	if( contT < 10 ){
+	if( contT < 10 && tcreado == false){
 		string nombre, color;
 		int tamano, distancia, ataque, defensa;
 		cout << "Ingrese nombre: ";
@@ -95,7 +95,7 @@ void agregarTargaryen(){
 		t.setSoldado( d, contT );
 		contT++;
 	} else
-		cout << "El ejercito ya esta lleno! ";
+		cout << "El ejercito ya esta lleno o no se ha creado la familia ";
 }
 
 
