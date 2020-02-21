@@ -56,7 +56,19 @@ void agregarLannister(){
 		cin >> defensa;
 		cout << "Ingrese la edad: ";
 		cin >> edad;
-		guardia g( nombre,tipo, edad, ataque, defensa );
+		guardia g;
+		if( tipo == 1 ){
+		       	guardia g2( nombre, guardia::CABALLERO, edad, ataque, defensa );
+		       	g = g2;	
+		}
+		if( tipo == 2 ){
+                        guardia g3( nombre, guardia::JINETE, edad, ataque, defensa );
+                        g = g3;
+                }
+		if( tipo == 3 ){
+                        guardia g4( nombre, guardia::ARQUERO, edad, ataque, defensa );
+                        g = g4;
+                }
 		l.setSoldado( g, contL );
 		contL++;
 	}else
